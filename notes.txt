@@ -1,0 +1,20 @@
+extra large array        large array         medium array 
+
+insert 946.1 ms         insert 6.5 ms       insert 208 us
+append 3.73             append 603 us       append 158 us 
+
+
+small array             tiny array 
+insert 51 us            insert 51 us
+append 104 us           append 112 us 
+
+
+for double insert it is pushing the new numbers in at the beginning of the array. this 
+causes every index along the array to shift one down. the longer the array the slower
+this is going to go. so insert scales significantly worse than append. append is just 
+adding the number at the end of the array. this allows it to just perform one action.
+it is still slower in longer arrays but it scales much better because it doesn't have 
+to shift the whole array. 
+
+
+
